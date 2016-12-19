@@ -38,7 +38,7 @@ export default {
       },
       inject: true
     }),
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin({analyzerMode: 'static'})
   ],
   module: {
     loaders: [

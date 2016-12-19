@@ -9,7 +9,6 @@ export const PdpsPage = (props) => {
   function handleClick(e) {
     e.preventDefault();
     props.actions.createPdp();
-    console.log('The link was clicked.');
   }
 
   return (

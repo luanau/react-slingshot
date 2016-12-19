@@ -7,13 +7,13 @@ const PdpList = (props) => {
 
   const pdps = props.pdps;
 //   const listItems = Object.values(pdps).map(function(item){return <li>{item.id}</li>;});
-  const listItems = Object.values(pdps).map((item)=><li key={item.id}>{item.id}</li>);
+  const listItems = Object.values(pdps).map((item)=><li key={item.id}><a className="not-active" href="">{item.id}</a></li>);
 //   const listItems = Object.values(pdps).map((item) =>
 //     <li>{item.id}</li>
 //   );
 
   return (
-     <ul>{listItems}</ul>
+     <ol className="rectangle-list">{listItems}</ol>
 
     // <input
     //   className="small"
