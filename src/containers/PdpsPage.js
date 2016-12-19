@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 import * as actions from '../actions/pdpsActions';
 // import FuelSavingsForm from '../components/FuelSavingsForm';
 import PdpList from '../components/PdpList';
+import Excel from '../components/Excel';
 
 export const PdpsPage = (props) => {
   function handleClick(e) {
@@ -16,18 +17,24 @@ export const PdpsPage = (props) => {
 <button type="button" onClick={handleClick}>Click Me!</button>
     <PdpList
       pdps={props.pdps}
-    /></div>
+    />
+    <Excel
+      props={props.books}
+    />
+    </div>
   );
 };
 
 PdpsPage.propTypes = {
   actions: PropTypes.object.isRequired,
-  pdps: PropTypes.object.isRequired
+  pdps: PropTypes.object.isRequired,
+  books: PropTypes.object.isRequired
 };
   
 function mapStateToProps(state) {
   return {
-    pdps: state.pdps
+    pdps: state.pdps,
+    books: state.books,
   };
 }
 
