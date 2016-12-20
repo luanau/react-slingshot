@@ -19,7 +19,7 @@ export const PdpsPage = (props) => {
       pdps={props.pdps}
     />
     <Excel
-      data={props.books}
+      headers={props.books.headers} initialData={props.books.data}
     />
     </div>
   );
